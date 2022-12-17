@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shrey Soral</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico?v=2" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/3ea53c1d6b.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <nav class="p-3 bg-white shadow md:flex md:items-center md:justify-between">
+    <div class="flex justify-between items-center ">
+      <span class="text-2xl font-[Poppins] cursor-pointer">
+        <img class="h-10 inline"
+          src="letter-s.png">
+          Shrey Soral
+      </span>
+
+      <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      </span>
+    </div>
+
+    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#one" class="text-xl hover:text-cyan-500 duration-500">Home</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#two" class="text-xl hover:text-cyan-500 duration-500">About</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#four" class="text-xl hover:text-cyan-500 duration-500">Projects</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="mailto:shreysoral@gmail.com" class="text-xl hover:text-cyan-500 duration-500">Contact me</a>
+      </li>
+<h2 class=""></h2>
+    </ul>
+  </nav>
+
+
+  <script>
+    function Menu(e){
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+  </script>
+  <!-- <nav class="px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="#" class="flex items-center">
+          <img src="letter-s.png" class="h-6 mr-3 sm:h-9" alt="Logo" />
+          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Shrey Soral</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="flex flex-col p-4 mt-4rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="#one" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#two" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          </li>
+          <li>
+            <a href="#three" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+          </li>
+          <li>
+            <a href="mailto:shreysoral@gmail.com" class="block py-2 pl-3 pr-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+  <main>
+    <section id="one">
+      <div class="main bg-white-90 py-28">
+        <div class="text-6xl pl-0 pb-14 text-center">
+          Designer, Frontend Developer & Mentor
+        </div>
+        <h1 class="text-center text-lg">I design and code beautifully simple things, and I love what I do.</h1>
+        <img class="block m-auto w-2/12 pt-9 rounded-bl-sm" src="shrey-edited-modified.png">
+        <div class="">
+          <img class="w-4/6 block m-auto pt-10 pl-3" src="mainpic.svg">
+        </div>
+    </section>
+    <section id="two">
+      <div class="bg-purple-600 text-center block pb-20 pt-20 pl-6 pr-6">
+        <h1 class="text-white text-center font-bold text-4xl mb-16">Hi, I’m Shrey. Nice to meet you.</h1>
+        <p class="text-center text-white leading-6 mt-2 font-bold text-2xl" style="line-height:1.5em;">Since beginning
+          my journey as a freelance designer over 2 years ago, I've done remote work for agencies, consulted for
+          startups, and collaborated with talented people to create digital products for both business and consumer use.
+          I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at
+          a time.</p>
+      </div>
+    </section>
+    <section id="four">
+      <div class="container-fluid">
+        <h3 class="text-center mt-4 font-bold text-3xl">Projects</h3>
+        <p class="text-center mt-4 font-medium mb-4">Here are a few past design projects I've worked on. Want to see
+          more? <a style="color:#1a8cff;" href="mailto:shreysoral@gmail.com">Email me.</a></p>
+        <div class="card-columns">
+          <div class="card">
+            <img src="omnifood.png" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">Omnifood</h5>
+              <p class="card-text">Startup Landing page</p>
+              <a href="https://shreysoral.github.io/Omnifood-website/" class="btn btn-primary mt-4">View project</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="download.jpeg" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title">Tindog</h5>
+              <p class="card-text">Startup landing page</p>
+              <a href="https://shreysoral.github.io/Tin-dog/" class="btn btn-primary mt-4">View project</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="portfolio.png" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">Portfolio website</h5>
+              <p class="card-text">Simple personal portfolio website</p>
+              <a href="https://shreysoral.github.io/CSS-MySite/" class="btn btn-primary mt-4">View project</a>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="three">
+      <div>
+        <h3 class="text-center font-bold pt-4 text-lg">Interested in collaborating with me?</h3>
+        <p class="text-center font-semibold text-ellipsis">I’m always open to discussing product design work or
+          partnership opportunities.</p>
+        <div class="text-center">
+          <a class="btn btn-primary mt-4" href="mailto:shreysoral@gmail.com">Start a conversation</a>
+        </div>
+        <hr class="mt-4">
+      </div>
+    </section>
+    <div class="bottom-container text-center p-0 mt-3 mb-0 ml-0 mr-0">
+      <a class="footer-link font-bold"
+        href="https://www.linkedin.com/in/shrey-soral-2997101b4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B1p23blS6RZGG6rbOC%2FGK1w%3D%3D">LinkedIn</a>
+      <a class="footer-link ml-4 font-bold" href="https://github.com/ShreySoral">GitHub</a>
+      <p class="copyright mt-2 block font-medium">© 2022 Shrey Soral.</p>
+    </div>
+    </div>
+    </div>
+  </main>
+</body>
+</html>
